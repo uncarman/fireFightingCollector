@@ -1,0 +1,30 @@
+{
+  "name": "node_collector_server",
+  "version": "1.0.0",
+  "description": "透传网关服务端",
+  "main": "index.js",
+  "dependencies": {
+    "bytenode": "^1.1.6",
+    "mysql": "^2.17.1"
+  },
+  "scripts": {
+    "c10": "forever start -l `pwd`/logs/prod.txt -a src/index.js 10",
+    "start1": "forever start -l D:/logs/prod.txt -a dist/index.js 1",
+    "mds": "forever start -l D:/works/projects/node_collector_server/logs/test.txt -a test/httpServ.js",
+    
+    "nodec": "nodec build.js --skip-npm-install",
+    "build": "node build.js",
+    "c1": "node src/index.bak.js 0 client",
+    "c2": "node src/index.bak.js 1 client",
+    "c3": "node src/index.js 2 client",
+    "c4": "node src/index.js 3 client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uncarman/node_collector_server.git"
+  },
+  "author": "sam",
+  "devDependencies": {
+    "javascript-obfuscator": "^1.1.1"
+  }
+}
